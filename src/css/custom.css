@@ -3,6 +3,7 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
+
 html{
   overflow-x: hidden;
 }
@@ -17,8 +18,7 @@ html{
 }
 
 .carousel-item img {
-  width: 100%;
-  height: 40vh;
+  max-width: 100%;
 }
 
 .carousel .thumbs {
@@ -48,7 +48,7 @@ html{
 
 @media (max-width: 788px){
   .carousel {
-    margin: 50px 30px 0 30px;
+    margin: 50px 0 0 0;
   }
   
   .carousel-item img {
@@ -58,7 +58,10 @@ html{
 
 @media (max-width: 500px){
   .carousel {
-    margin: 50px 5px 0 5px;
+    margin: 50px 0 0 0;
+  }
+  .carousel-item img {
+    height: 25vh;
   }
 }
 /* Fim CSS Carousel */
@@ -208,12 +211,20 @@ ul.tp-rodape-menu li.tp-rodape-menu-item li {
     display: inline-block;
     margin: 0 auto;
   }
+
+  section.tp-rodape-itens ul.tp-rodape-menu {
+    margin: 0 !important;
+  }
 }
 
 @media (min-width: 560px){
   footer.tp-rodape div.tp-rodape-marca {
-      padding: 0;
-      text-align: left;
+    padding: 0;
+    text-align: left;
+  }
+  
+  section.tp-rodape-itens ul.tp-rodape-menu {
+    margin: 0 !important;
   }
 }
 
@@ -389,7 +400,7 @@ ul.tp-rodape-menu li.tp-rodape-menu-item li {
 
 .card .card-img {
   width: 100%;
-  height: 150px; 
+  height: 160px; 
   border-radius: 4px;
   margin-bottom: 10px;
 }
@@ -437,5 +448,17 @@ ul.tp-rodape-menu li.tp-rodape-menu-item li {
   .card .card-img {
     height: 200px;
   }
+}
+
+@media (max-width: 608px){
+  .card {
+    margin: 10px 30px;
+  } 
+}
+
+@media (min-width: 1920px){
+  .card .card-img {
+    height: 200px; 
+  }  
 }
 /* Fim CSS Card */
