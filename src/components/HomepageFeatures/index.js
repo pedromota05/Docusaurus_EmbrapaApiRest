@@ -57,11 +57,11 @@ export const Testeapi = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    CarregaBlogs();
-    document.title = 'teste';
+    EmbrapaApi();
+    document.title = 'Embrapa';
   }, []);
 
-  const CarregaBlogs = async () => {
+  const EmbrapaApi = async () => {
     const url = 'https://apirestembrapa--pedromota05.repl.co/api/services';
     try {
       const response = await fetch(url);
@@ -88,7 +88,7 @@ export const Testeapi = () => {
                 <img className="card-img" src={item.image} alt="Imagem" />
                 <span className="card-description">{item.date}</span>
                 <p className="card-title">{item.title}</p>
-                <a href="#" className="card-link">Saiba Mais</a>
+                <a href="https://www.embrapa.br/agropecuaria-oeste" className="card-link">Saiba Mais</a>
               </div>
             ))
           ) : (
@@ -99,10 +99,6 @@ export const Testeapi = () => {
     </>
   );
 };
-
-
-
-
 
 export const Localization = () => {
   return(
