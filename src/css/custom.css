@@ -446,14 +446,24 @@ ul.tp-rodape-menu li.tp-rodape-menu-item li {
     flex: 1 1 15rem;
   }
   .card .card-img {
-    height: 200px;
+    height: 160px;
   }
 }
 
-@media (max-width: 608px){
+@media (max-width: 608px) {
   .card {
-    margin: 10px 30px;
-  } 
+    margin: 10px 35px;
+    padding: 15px 10px;
+  }
+  .card .card-img {
+    width: 92%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .card-description {
+    margin-top: 12px;
+  }
 }
 
 @media (min-width: 1920px){
